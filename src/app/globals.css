@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body{
+    background-image: url("/shenlong.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+} */
