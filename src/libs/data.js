@@ -26,3 +26,35 @@ export async function getCharacters() {
     console.error({ error: error.message });
   }
 }
+
+export async function getCharactersOrderAsc() {
+  try {
+    const charactersAsc =
+      await sql`SELECT characters.id,characters.name,characters.ki,characters.maxki,characters.race,characters.gender,characters.description,characters.image,characters.affiliation FROM characters ORDER BY characters.name ASC`;
+    return charactersAsc.rows;
+  } catch (error) {
+    console.error({ error: error.message });
+  }
+}
+
+export async function getCharactersOrderDesc() {
+  try {
+    const charactersDesc =
+      await sql`SELECT characters.id,characters.name,characters.ki,characters.maxki,characters.race,characters.gender,characters.description,characters.image,characters.affiliation FROM characters ORDER BY characters.name DESC`;
+    return charactersDesc.rows;
+  } catch (error) {
+    console.error({ error: error.message });
+  }
+}
+
+export async function getCharactersByName(query) {
+  try {
+    const charactersByName =
+      await sql`SELECT * FROM characters WHERE characters.name ILIKE ${`%${query}%`} 
+    ORDER BY characters.name DESC
+    LIMIT 6`;
+    return charactersByName.rows;
+  } catch (error) {
+    console.error({ error: message.error });
+  }
+}
