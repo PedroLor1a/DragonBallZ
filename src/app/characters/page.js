@@ -25,10 +25,8 @@ export default async function PageCharacters({ searchParams }) {
   }
 
   return (
-    <div className="w-screen h-screen bg-gray-300 ">
-      <div className="relative z-10">
-        <CardsCharacters charactersView={charactersView} />
-      </div>
+    <div className="w-full h-full bg-gray-300">
+      <CardsCharacters charactersView={charactersView} />
     </div>
   );
 }

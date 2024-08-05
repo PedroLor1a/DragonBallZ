@@ -6,7 +6,7 @@ import InputsBar from "./InputsBar";
 const CardsCharacters = async ({charactersView}) => {
 
   return (
-    <div className="flex flex-wrap items-center mt-16 bg-gray-300">
+    <div className="w-full h-full flex flex-wrap items-center mt-16 bg-gray-300 ml-8 ">
       <InputsBar/>
       {charactersView?.map((e) => (
         <div key={e.id} className="flex items-center justify-center w-72 h-2/4 mx-6 my-10 p-2 border border-black bg-gradient-to-br from-[#E18302] to-white rounded-lg shadow-md">

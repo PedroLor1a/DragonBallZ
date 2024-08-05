@@ -7,7 +7,7 @@ export default async function Home() {
         <div className="w-4/5 h-3/4 border-2 border-transparent rounded-lg bg-white/5 backdrop-blur-sm flex flex-col">
           <div className="flex justify-center items-center p-4 border-b border-none"></div>
           <div className="flex flex-1 items-center justify-between pr-4">
-            <div className="flex flex-col justify-center items-start w-2/5 h-full p-6 mx-28 my-10">
+            <div className="flex flex-col justify-center items-start w-2/5 h-full p-6 mx-28 my-12">
               <h1 className="text-7xl font-bold mb-4 text-black font-sans">
                 Hola!
               </h1>
