@@ -1,5 +1,4 @@
 import CardsCharacters from "@/components/CardsCharacters";
-import Filters from "@/components/Filters";
 import {
   getCharacters,
   getCharactersOrderAsc,
@@ -10,7 +9,6 @@ import {
 export default async function PageCharacters({ searchParams }) {
   const query = searchParams?.filter;
   const querySearch = searchParams?.search;
-
   let charactersView;
   if (querySearch) {
     charactersView = await getCharactersByName(querySearch);

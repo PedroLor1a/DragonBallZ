@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Filters from "./Filters";
-import SearchBar from "./SearchBar";
 import InputsBar from "./InputsBar";
 
 const CardsCharacters = async ({charactersView}) => {

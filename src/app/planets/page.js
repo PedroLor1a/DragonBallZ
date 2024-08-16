@@ -1,16 +1,12 @@
-import Image from "next/image";
+import { getPlanets } from "@/libs/data";
+import CardsPlanets from "@/components/CardsPlanets";
 
 export default async function PagePlanets() {
+  const planetsView = await getPlanets();
+
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-gray-300">
-      <h1 className="text-5xl font-sans mb-4">Proximamente...</h1>
-      <Image
-        src="/gokuBye.gif"
-        alt="Goku"
-        width={500}
-        height={80}
-        className="rounded-3xl"
-      />
+    <div className="w-full h-full bg-gray-300">
+      <CardsPlanets planetsView={planetsView} />
     </div>
   );
 }
